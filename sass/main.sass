@@ -112,11 +112,9 @@ li
   background-color: $yellow
 .contact, ._contact div
   background-color: black
-
 .menu__ball
   text-align: center
   position: relative
-  transition: .2s ease all
   ._home
     top: -$baseSpace*2
   ul
@@ -129,7 +127,7 @@ li
       margin: 0
       padding: 0
       text-align: center
-      transition: 0.8s linear all
+      transition: 0.3s linear all
       top: -150px
       div
         display: inline-block
@@ -251,3 +249,34 @@ form
     label
       text-align: left
       width: 100%
+.nav__work
+  article
+    display: inline-block
+    width: $baseSpace*8
+    height: $baseSpace*8
+    margin: $baseSpace/2
+    background: linear-gradient(to bottom, #7d7e7d 20%,#0e0e0e 100%)
+    position: relative
+  img
+    width: $baseSpace*8
+    height: $baseSpace*8
+    transition: .2s all linear
+  dl
+    display: none
+  h3,h4
+    position: absolute
+    left: $baseSpace/2
+    color: white
+    opacity: 0
+    transition: .2s all linear
+  h4
+    bottom: 0
+  h3
+    bottom: 1em
+  article
+    &:hover
+      cursor: pointer
+      img
+        opacity: 0.3
+      h3, h4
+        opacity: 1

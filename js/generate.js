@@ -6,9 +6,10 @@
   var home = document.querySelector('.changeContextHome');
   var about = document.querySelector('.changeContextAbout');
   var contact = document.querySelector('.changeContextContact');
+  var work = document.querySelector('.changeContextWork');
 
-  var oldContext = "changeContextHome"
-  var currentContext = "changeContextHome"
+  var oldContext = "changeContextHome";
+  var currentContext = "changeContextHome";
 
   function changeContext(ctx) {
     if(oldContext == currentContext){
@@ -20,10 +21,12 @@
       if(oldContext == 'changeContextHome'){oldSection = "nav__home";}
       if(oldContext == 'changeContextAbout'){oldSection = "nav__about";}
       if(oldContext == 'changeContextContact'){oldSection = "nav__contact";}
+      if(oldContext == 'changeContextWork'){oldSection = "nav__work";}
 
       if(currentContext == 'changeContextHome'){newSection = "nav__home";}
       if(currentContext == 'changeContextAbout'){newSection = "nav__about";}
       if(currentContext == 'changeContextContact'){newSection = "nav__contact";}
+      if(currentContext == 'changeContextWork'){newSection = "nav__work";}
 
       var oldContextSection = document.querySelector('.'+oldSection);
       oldContextSection.style.animationName="section_animation_out";
@@ -45,10 +48,12 @@
       if(oldContext == 'changeContextHome'){oldButton = "_home";}
       if(oldContext == 'changeContextAbout'){oldButton = "_about";}
       if(oldContext == 'changeContextContact'){oldButton = "_contact";}
+      if(oldContext == 'changeContextWork'){oldButton = "_work";}
 
       if(currentContext == 'changeContextHome'){newButton = "_home";}
       if(currentContext == 'changeContextAbout'){newButton = "_about";}
       if(currentContext == 'changeContextContact'){newButton = "_contact";}
+      if(currentContext == 'changeContextWork'){newButton = "_work";}
 
       var oldContextButton = document.querySelector('.'+oldButton);
       oldContextButton.style.top="-150px";
@@ -72,6 +77,11 @@
   contact.addEventListener('click', function(){
     oldContext = currentContext;
     currentContext = "changeContextContact";
+    changeContext(this);
+  });
+  work.addEventListener('click', function(){
+    oldContext = currentContext;
+    currentContext = "changeContextWork";
     changeContext(this);
   });
 
