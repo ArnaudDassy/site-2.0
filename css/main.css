@@ -393,6 +393,21 @@ form .containerTextContact label {
 .nav__work div + div {
   display: none;
 }
+.nav__work div + div p {
+  clear: both;
+  opacity: 1;
+  position: static;
+  display: inline-block;
+  width: 10%;
+  padding: 12px;
+  font: 1.5rem "Futura Bold";
+  border: 4px solid black;
+  cursor: pointer;
+}
+.nav__work div + div p:hover {
+  background-color: black;
+  color: white;
+}
 .nav__work h3, .nav__work p {
   position: absolute;
   left: 12px;
@@ -414,6 +429,11 @@ form .containerTextContact label {
 }
 .nav__work .canBeHovered:hover h3, .nav__work .canBeHovered:hover p {
   opacity: 1;
+}
+.nav__work .clearFloat {
+  clear: both;
+  position: static;
+  display: none;
 }
 
 .disableWork {

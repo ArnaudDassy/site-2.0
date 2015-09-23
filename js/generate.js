@@ -92,34 +92,48 @@
 
   var affichageWork = function() {
     var works = document.querySelector('.nav__work');
+    var aEventListener = [];
     for( ; ++i<works.children.length ; ) {
       works.children[i].newID = i;
-      works.children[i].addEventListener('click', function() {
+      aEventListener[i] = works.children[i].addEventListener('click', function() {
         showWork(this);
       })
     }
     function showWork(work) {
-      i=1;
-      for( ; ++i<works.children.length ; ) {
-          works.children[i].className='disableWork';
+      if (work.className == "scoped") {
+        //
       }
-      i=1;
-      setTimeout(function(){
+      else {
+        i=1;
         for( ; ++i<works.children.length ; ) {
-            works.children[i].style.display='none';
+            works.children[i].className='disableWork';
         }
-        work.className="";
-        work.style.display='inline-block';
-        work.style.position="absolute";
-        work.style.left="96px";
-        work.style.width="100%";
-        work.style.opacity="1";
-        work.children[0].children[3].style.display="block";
-        work.children[0].children[2].className="imgWork";
-        work.children[0].children[4].style.display="block";
-      }, 600);
+        i=1;
+        setTimeout(function(){
+          for( ; ++i<works.children.length ; ) {
+              works.children[i].style.display='none';
+          }
+          work.className="scoped";
+          work.style.display='inline-block';
+          work.style.width="100%";
+          work.style.height="auto";
+          work.style.opacity="1";
+          work.children[0].children[3].style.display="block";
+          work.children[0].children[4].style.display="block";
+          work.children[0].children[2].className="imgWork";
+          work.children[1].style.display="block";
+          work.removeEventListener("click", aEventListener[work.newID]);
+        }, 600);
+      }
+      work.children[1].children[0].addEventListener("click", function() {
+        hideWork(this);
+      })
+    }
+    function hideWork(work) {
+      work.style.opacity="0";
     }
   }
+
 
   changementDeSection();
   affichageWork();
