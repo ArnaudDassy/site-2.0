@@ -91,14 +91,36 @@
   }
 
   var affichageWork = function() {
+
     var works = document.querySelector('.nav__work');
+
+    i=1;
+
+    function hideAll(works) {
+      i=1;
+      for( ; ++i<works.children.length ; ) {
+        works.children[i].className="canBeHovered";
+        works.children[i].style.opacity='0';
+        works.children[i].style.width='192px';
+        works.children[i].style.height='192px';
+        works.children[i].children[0].children[3].style.display="none";
+        works.children[i].children[0].children[4].style.display="none";
+        works.children[i].children[0].children[2].className="";
+        works.children[i].children[1].style.display="none";
+        works.children[i].style.display='inline-block';
+        works.children[i].style.opacity='1';
+      }
+    };
+
     var aEventListener = [];
+
     for( ; ++i<works.children.length ; ) {
       works.children[i].newID = i;
       aEventListener[i] = works.children[i].addEventListener('click', function() {
         showWork(this);
       })
     }
+
     function showWork(work) {
       if (work.className == "scoped") {
         //
@@ -129,9 +151,29 @@
         hideWork(this);
       })
     }
+
     function hideWork(work) {
-      work.style.opacity="0";
+      i=1;
+      var article = work.parentNode.parentNode;
+      article.style.opacity='0';
+      article.style.width='192px';
+      article.style.height='192px';
+      article.children[0].children[3].style.display="none";
+      article.children[0].children[4].style.display="none";
+      article.children[0].children[2].className="";
+      article.children[1].style.display="none";
+      setTimeout(function(){
+        for( ; ++i<works.children.length ; ) {
+            works.children[i].style.display='inline-block';
+            works.children[i].className='canBeHovered';
+            works.children[i].style.opacity='1';
+
+        }
+      }, 300);
     }
+
+    hideAll(works);
+
   }
 
 
