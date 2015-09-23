@@ -9,6 +9,10 @@
     var contact = document.querySelector('.changeContextContact');
     var work = document.querySelector('.changeContextWork');
 
+    document.querySelector('.nav__about').style.display = "none";
+    document.querySelector('.nav__work').style.display = "none";
+    document.querySelector('.nav__contact').style.display = "none";
+
     var oldContext = "changeContextHome";
     var currentContext = "changeContextHome";
 

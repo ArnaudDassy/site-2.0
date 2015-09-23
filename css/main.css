@@ -42,6 +42,17 @@
     opacity: 0;
   }
 }
+@keyframes fade_in_then_out {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @font-face {
   font-family: "Futura Book";
   src: url("../font/Futura LT Folder/Futura LT Book.otf") format("opentype");
@@ -67,7 +78,6 @@ body {
 }
 
 .nav {
-  display: none;
   opacity: 1;
 }
 
@@ -102,17 +112,12 @@ ul div {
   cursor: pointer;
   position: relative;
 }
-ul div:hover span {
-  position: absolute;
-  left: 300px;
-}
 ul div div {
   display: inline-block;
   width: 100%;
-  height: 35px;
+  height: 24px;
   background-color: black;
   position: relative;
-  z-index: 50;
 }
 ul div span {
   display: inline-block;
@@ -202,6 +207,14 @@ li {
 }
 .menu__bottom ul {
   margin: 0;
+}
+.menu__bottom ul li {
+  opacity: 0;
+  animation: fade_in_then_out 1s;
+  transition: 0.3s ease all;
+}
+.menu__bottom ul > div:hover li {
+  opacity: 1;
 }
 
 .nav__home {
