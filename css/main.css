@@ -212,10 +212,10 @@ li {
   font-size: 3rem;
   margin: 12px 0;
 }
-.nav__about h2 {
-  line-height: 1;
+.nav__about .skillHeader {
+  font-size: 5rem;
 }
-.nav__about article {
+.nav__about .skillContainer {
   width: 60%;
   margin: 0 auto;
 }
