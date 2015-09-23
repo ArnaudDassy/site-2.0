@@ -341,14 +341,14 @@ form .containerTextContact label {
 .nav__work dl {
   display: none;
 }
-.nav__work h3, .nav__work h4 {
+.nav__work h3, .nav__work p {
   position: absolute;
   left: 12px;
   color: white;
   opacity: 0;
   transition: 0.2s all linear;
 }
-.nav__work h4 {
+.nav__work p {
   bottom: 0;
 }
 .nav__work h3 {
@@ -360,7 +360,7 @@ form .containerTextContact label {
 .nav__work article:hover img {
   opacity: 0.3;
 }
-.nav__work article:hover h3, .nav__work article:hover h4 {
+.nav__work article:hover h3, .nav__work article:hover p {
   opacity: 1;
 }
 
