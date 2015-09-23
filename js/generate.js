@@ -1,7 +1,7 @@
 (function() {
   "use strict";
 
-  var i=0;
+  var i=1;
   // HEADER
   var changementDeSection = function() {
     var home = document.querySelector('.changeContextHome');
@@ -94,26 +94,31 @@
     var works = document.querySelector('.nav__work');
     for( ; ++i<works.children.length ; ) {
       works.children[i].newID = i;
-      works.children[i].addEventListener('click', function(id) {
+      works.children[i].addEventListener('click', function() {
         showWork(this);
       })
     }
     function showWork(work) {
-      i=0;
+      i=1;
       for( ; ++i<works.children.length ; ) {
-        if(work.newID == i){
-          // nothing
-        }
-        else {
           works.children[i].className='disableWork';
-          setTimeout(function() {
-          console.log(this);
-          }, 600)
-        }
       }
+      i=1;
+      setTimeout(function(){
+        for( ; ++i<works.children.length ; ) {
+            works.children[i].style.display='none';
+        }
+        work.className="";
+        work.style.display='inline-block';
+        work.style.position="absolute";
+        work.style.left="96px";
+        work.style.width="100%";
+        work.style.opacity="1";
+        work.children[0].children[3].style.display="block";
+        work.children[0].children[2].className="imgWork";
+        work.children[0].children[4].style.display="block";
+      }, 600);
     }
-
-
   }
 
   changementDeSection();

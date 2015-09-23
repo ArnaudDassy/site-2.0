@@ -55,12 +55,19 @@ $blue: #00FFD5
 $purple: #FC08F8
 $yellow: #F6FF00
 
+.nav__work .imgWork
+  float: left
+  width: 30%
+  height: auto
+
 body
   font-family: 'Futura Book'
   width: 80%
   margin: 0 auto
   text-align: center
   margin-bottom: 120px
+section
+  position: relative
 .nav
   opacity: 1
 h1
@@ -161,6 +168,7 @@ li
     li
       opacity: 0
       animation: fade_in_then_out 1s
+      animation-delay: 1s
       transition: 0.3s ease all
   ul>div
     &:hover
@@ -265,29 +273,51 @@ form
     width: $baseSpace*8
     height: $baseSpace*8
     margin: $baseSpace/2
-    background: linear-gradient(to bottom, #7d7e7d 20%,#0e0e0e 100%)
     position: relative
+    opacity: 1
+    transition: 0.3s ease all
   img
     width: $baseSpace*8
     height: $baseSpace*8
     transition: .2s all linear
   dl
     display: none
+    text-align: left
+    float: right
+    padding: $baseSpace/2
+    width: 65%
+    font-family: "Futura Book"
+    font-size: 1.5rem
+    margin-top: 0
+    dt
+      font-family: "Futura Bold"
+    dd
+      margin: 0
+      padding-left: $baseSpace/2
+    dt, dd
+      display: inline-block
+    dt.retourChariot
+      display: block
+      margin-top: $baseSpace/2
+      &+dd
+        padding-left: 0
+  div+div
+    display: none
   h3, p
     position: absolute
     left: $baseSpace/2
-    color: white
+    color: black
     opacity: 0
     transition: .2s all linear
   p
     bottom: 0
   h3
     bottom: 1em
-  article
+  .canBeHovered
     &:hover
       cursor: pointer
       img
-        opacity: 0.3
+        opacity: 0.4
       h3, p
         opacity: 1
 

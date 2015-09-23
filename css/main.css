@@ -69,12 +69,22 @@
   font-family: "Futura Medium";
   src: url("../font/Futura LT Folder/Futura LT Medium.otf") format("opentype");
 }
+.nav__work .imgWork {
+  float: left;
+  width: 30%;
+  height: auto;
+}
+
 body {
   font-family: "Futura Book";
   width: 80%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 120px;
+}
+
+section {
+  position: relative;
 }
 
 .nav {
@@ -211,6 +221,7 @@ li {
 .menu__bottom ul li {
   opacity: 0;
   animation: fade_in_then_out 1s;
+  animation-delay: 1s;
   transition: 0.3s ease all;
 }
 .menu__bottom ul > div:hover li {
@@ -343,8 +354,9 @@ form .containerTextContact label {
   width: 192px;
   height: 192px;
   margin: 12px;
-  background: linear-gradient(to bottom, #7d7e7d 20%, #0e0e0e 100%);
   position: relative;
+  opacity: 1;
+  transition: 0.3s ease all;
 }
 .nav__work img {
   width: 192px;
@@ -353,11 +365,38 @@ form .containerTextContact label {
 }
 .nav__work dl {
   display: none;
+  text-align: left;
+  float: right;
+  padding: 12px;
+  width: 65%;
+  font-family: "Futura Book";
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+.nav__work dl dt {
+  font-family: "Futura Bold";
+}
+.nav__work dl dd {
+  margin: 0;
+  padding-left: 12px;
+}
+.nav__work dl dt, .nav__work dl dd {
+  display: inline-block;
+}
+.nav__work dl dt.retourChariot {
+  display: block;
+  margin-top: 12px;
+}
+.nav__work dl dt.retourChariot + dd {
+  padding-left: 0;
+}
+.nav__work div + div {
+  display: none;
 }
 .nav__work h3, .nav__work p {
   position: absolute;
   left: 12px;
-  color: white;
+  color: black;
   opacity: 0;
   transition: 0.2s all linear;
 }
@@ -367,13 +406,13 @@ form .containerTextContact label {
 .nav__work h3 {
   bottom: 1em;
 }
-.nav__work article:hover {
+.nav__work .canBeHovered:hover {
   cursor: pointer;
 }
-.nav__work article:hover img {
-  opacity: 0.3;
+.nav__work .canBeHovered:hover img {
+  opacity: 0.4;
 }
-.nav__work article:hover h3, .nav__work article:hover p {
+.nav__work .canBeHovered:hover h3, .nav__work .canBeHovered:hover p {
   opacity: 1;
 }
 
