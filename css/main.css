@@ -368,4 +368,36 @@ form .containerTextContact label {
   animation: section_animation_out 0.5s forwards;
 }
 
+.toHide {
+  position: absolute;
+  left: -5000px;
+}
+
+.header {
+  font-size: 10rem;
+  margin: 0;
+}
+
+.name {
+  font-family: "Futura Bold";
+  margin-bottom: 24px;
+  margin-top: 72px;
+}
+
+.function {
+  font-family: "Futura Light";
+  margin: 24px 0;
+}
+
+.retourChariot {
+  display: block;
+}
+
+q {
+  font-size: 3rem;
+}
+q:after, q::before {
+  content: "";
+}
+
 /*# sourceMappingURL=main.css.map */
