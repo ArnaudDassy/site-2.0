@@ -42,6 +42,12 @@
   font-family: "Futura Medium"
   src: url('../font/Futura LT Folder/Futura LT Medium.otf') format('opentype')
 
+$baseSpace: 24px
+
+$blue: #00FFD5
+$purple: #FC08F8
+$yellow: #F6FF00
+
 body
   font-family: 'Futura Book'
   width: 80%
@@ -53,17 +59,17 @@ body
   opacity: 1
 h1
   font-size: 10rem
-  margin-bottom: 24px
-  margin-top: 80px
+  margin-bottom: $baseSpace
+  margin-top: $baseSpace*3
 h2
   font-size: 8rem
-  margin-top: 24px
-  margin-bottom: 24px
+  margin-top: $baseSpace
+  margin-bottom: $baseSpace
 h3
   font-size: 3rem
   margin: 0
 b
-  font-weight: bolder
+  font-family: "Futura Bold"
 ul
   margin-top: 80px
   div
@@ -97,16 +103,22 @@ li
   list-style-type: none
   font-size: 2rem
   font-weight: bolder
-  padding-bottom: 24px
-.home
-  background-color: #00FFD5
-.about
-  background-color: #FC08F8
-.work
-  background-color: #F6FF00
+  padding-bottom: $baseSpace
+.home, ._home div
+  background-color: $blue
+.about, ._about div
+  background-color: $purple
+.work, ._work div
+  background-color: $yellow
+.contact, ._contact div
+  background-color: black
+
 .menu__ball
   text-align: center
   position: relative
+  transition: .2s ease all
+  ._home
+    top: -$baseSpace*2
   ul
     padding: 0
     div
@@ -117,13 +129,8 @@ li
       margin: 0
       padding: 0
       text-align: center
-      display: none
       transition: 0.8s linear all
-    ._home
-      display: block
-      top: -50px
-      div
-        background-color: #00FFD5
+      top: -150px
       div
         display: inline-block
         width: 50px
@@ -157,7 +164,7 @@ li
 .nav__about
   p
     font-size: 3rem
-    margin: 12px 0
+    margin: $baseSpace/2 0
   h2
     line-height: 1
   article
@@ -210,7 +217,7 @@ form
   font-size: 2rem
   font-family: 'Futura Bold'
   div
-    margin: 24px
+    margin: $baseSpace
     border-bottom: 4px solid black
     label
       display: inline-block
@@ -221,6 +228,7 @@ form
       width: 79%
       border: none
       cursor: pointer
+      outline: none
   .buttonSubmitForm
     border: none
     input

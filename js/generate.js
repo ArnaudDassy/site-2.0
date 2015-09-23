@@ -41,8 +41,21 @@
 
       //Changin speed button
 
-      
+      var oldButton, newButton;
+      if(oldContext == 'changeContextHome'){oldButton = "_home";}
+      if(oldContext == 'changeContextAbout'){oldButton = "_about";}
+      if(oldContext == 'changeContextContact'){oldButton = "_contact";}
 
+      if(currentContext == 'changeContextHome'){newButton = "_home";}
+      if(currentContext == 'changeContextAbout'){newButton = "_about";}
+      if(currentContext == 'changeContextContact'){newButton = "_contact";}
+
+      var oldContextButton = document.querySelector('.'+oldButton);
+      oldContextButton.style.top="-150px";
+      setTimeout(function(){
+        var newContextButton = document.querySelector('.'+newButton);
+        newContextButton.style.top="-48px";
+      }, 500);
     }
   }
 
