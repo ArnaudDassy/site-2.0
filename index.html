@@ -16,7 +16,8 @@
     </head>
     <body>
       <h1 class="toHide">Arnaud Dassy - Web Developer</h1>
-        <section class="menu__ball">
+        <nav class="menu__ball">
+          <h2 class="toHide">Menu Rapide</h2>
           <ul>
             <div class="_home ball">
               <li>H</li>
@@ -35,19 +36,18 @@
               <div></div>
             </div>
           </ul>
-        </section>
+        </nav>
         <section class="nav__home nav">
-          <h3 class="toHide">Home</h3>
+          <h2 class="toHide">Home</h2>
           <p><span class="retourChariot">Arnaud Dassy</span><span class="retourChariot">Web Developer</span></p>
-          <q><span></span></q>
-          <h3>Design is for <em>Artists</em>,</h3>
-          <h3>Development is for <b>Geniuses</b>.</h3>
+          <q><span class="retourChariot">Design is for <em>Artists</em>,</span></q>
+          <q><span class="retourChariot">Development is for <b>Geniuses</b>.</span></q>
         </section>
         <section class="nav__about nav">
           <h2>About me</h2>
           <p>I'm 20, I'm a web developer & I'm the guy you need !</p>
-          <h2>Skills</h2>
-          <article>
+          <p class="skillHeader">Skills</p>
+          <div class="skillContainer">
             <div class="skill">
       				<h4>HTML5 / CSS3 </h4>
       				<div class="ladderFull">
@@ -96,14 +96,15 @@
       					<div class="ladderSkill MAYA"></div>
       				</div>
       			</div>
-          </article>
+          </div>
         </section>
         <section class="nav__work nav">
+          <h2 class="toHide">Works</h2>
           <h2>I know I'm amazing!</h2>
           <article>
             <div>
               <h3>Titre</h3>
-              <h4>Date</h4>
+              <p>Date</p>
               <img src="./img/1.jpg" alt="work">
               <dl>
                 <dt>Date : </dt><dd> 12/06/06</dd>
@@ -115,7 +116,7 @@
           <article>
             <div>
               <h3>Titre</h3>
-              <h4>Date</h4>
+              <p>Date</p>
               <img src="./img/2.jpg" alt="work">
               <dl>
                 <dt>Date : </dt><dd> 12/06/06</dd>
@@ -127,7 +128,7 @@
           <article>
             <div>
               <h3>Titre</h3>
-              <h4>Date</h4>
+              <p>Date</p>
               <img src="./img/3.jpg" alt="work">
               <dl>
                 <dt>Date : </dt><dd> 12/06/06</dd>
@@ -139,7 +140,7 @@
           <article>
             <div>
               <h3>Titre</h3>
-              <h4>Date</h4>
+              <p>Date</p>
               <img src="./img/4.jpg" alt="work">
               <dl>
                 <dt>Date : </dt><dd> 12/06/06</dd>
@@ -151,7 +152,7 @@
           <article>
             <div>
               <h3>Titre</h3>
-              <h4>Date</h4>
+              <p>Date</p>
               <img src="./img/5.jpg" alt="work">
               <dl>
                 <dt>Date : </dt><dd> 12/06/06</dd>
@@ -163,7 +164,7 @@
           <article>
             <div>
               <h3>Titre</h3>
-              <h4>Date</h4>
+              <p>Date</p>
               <img src="./img/6.jpg" alt="work">
               <dl>
                 <dt>Date : </dt><dd> 12/06/06</dd>
@@ -175,7 +176,7 @@
           <article>
             <div>
               <h3>Titre</h3>
-              <h4>Date</h4>
+              <p>Date</p>
               <img src="./img/7.jpg" alt="work">
               <dl>
                 <dt>Date : </dt><dd> 12/06/06</dd>
@@ -187,7 +188,7 @@
           <article>
             <div>
               <h3>Titre</h3>
-              <h4>Date</h4>
+              <p>Date</p>
               <img src="./img/8.jpg" alt="work">
               <dl>
                 <dt>Date : </dt><dd> 12/06/06</dd>
@@ -199,7 +200,7 @@
           <article>
             <div>
               <h3>Titre</h3>
-              <h4>Date</h4>
+              <p>Date</p>
               <img src="./img/1.jpg" alt="work">
               <dl>
                 <dt>Date : </dt><dd> 12/06/06</dd>
@@ -211,7 +212,7 @@
           <article>
             <div>
               <h3>Titre</h3>
-              <h4>Date</h4>
+              <p>Date</p>
               <img src="./img/2.jpg" alt="work">
               <dl>
                 <dt>Date : </dt><dd> 12/06/06</dd>
@@ -223,7 +224,7 @@
           <article>
             <div>
               <h3>Titre</h3>
-              <h4>Date</h4>
+              <p>Date</p>
               <img src="./img/3.jpg" alt="work">
               <dl>
                 <dt>Date : </dt><dd> 12/06/06</dd>
@@ -235,7 +236,7 @@
           <article>
             <div>
               <h3>Titre</h3>
-              <h4>Date</h4>
+              <p>Date</p>
               <img src="./img/4.jpg" alt="work">
               <dl>
                 <dt>Date : </dt><dd> 12/06/06</dd>
@@ -246,6 +247,7 @@
           </article>
         </section>
         <section class="nav__contact nav">
+          <h2 class="toHide">Contact</h2>
           <h2>Any idea or project ?</h2>
           <form action="">
             <div><label for="name">Name</label><input type="text" name="name" id="name"></div>
@@ -255,7 +257,8 @@
             <div class="buttonSubmitForm"><input type="submit" value="Send"></div>
           </form>
         </section>
-        <section class="menu__bottom">
+        <nav class="menu__bottom">
+          <h2 class="toHide">Menu de navigation</h2>
           <ul>
             <div class="changeContextHome">
               <div class="home"></div><span></span><li>Home</li>
@@ -270,7 +273,7 @@
               <div class="contact"></div><span></span><li>Contact</li>
             </div>
           </ul>
-        </section>
+        </nav>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
@@ -287,7 +290,7 @@
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
         <script src="./js/generate.js"></script>
-        <div id="hcard-Arnaud-Dassy" class="vcard" style="display:none;">
+        <div id="hcard-Arnaud-Dassy" class="vcard toHide">
           <span class="fn">Arnaud Dassy</span>
           <a class="email" href="mailto:arnaud.dassy@gmail.com">arnaud.dassy@gmail.com</a>
           <div class="adr">
