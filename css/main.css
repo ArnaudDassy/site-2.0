@@ -364,4 +364,8 @@ form .containerTextContact label {
   opacity: 1;
 }
 
+.disableWork {
+  animation: section_animation_out 0.5s forwards;
+}
+
 /*# sourceMappingURL=main.css.map */
