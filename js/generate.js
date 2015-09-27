@@ -1,38 +1,53 @@
 (function() {
   "use strict";
 
-  var i=1;
-  // HEADER
+  var i = 1;
+
   var changementDeSection = function() {
-    var home = document.querySelector('.changeContextHome');
-    var about = document.querySelector('.changeContextAbout');
-    var contact = document.querySelector('.changeContextContact');
-    var work = document.querySelector('.changeContextWork');
 
-    document.querySelector('.nav__about').style.display = "none";
-    document.querySelector('.nav__work').style.display = "none";
-    document.querySelector('.nav__contact').style.display = "none";
+    var aContexts = [
+      "changeContextHome",
+      "changeContextAbout",
+      "changeContextWork",
+      "changeContextContact"
+    ],
+    aSections = [
+      "nav__home",
+      "nav__about",
+      "nav__work",
+      "nav__contact"
+    ],
+    aButtons = [
+      "_home",
+      "_about",
+      "_work",
+      "_contact"
+    ],
+    i = -1,
+    oldContext = "changeContextHome",
+    currentContext = oldContext,
+    oldSection, newSection, oldButton, newButton;
 
-    var oldContext = "changeContextHome";
-    var currentContext = "changeContextHome";
+    for ( ; ++i < aContexts.length ; ) {
+      document.querySelector('.'+aContexts[i]).addEventListener("click",function(){
+        oldContext = currentContext;
+        currentContext = this.className;
+        changeContext(this);
+      });
+    }
+
+    for ( i=0 ; ++i < aSections.length ; ) {
+      document.querySelector('.'+aSections[i]).style.display = "none";
+    }
 
     function changeContext(ctx) {
-      if(oldContext == currentContext){
-        console.log('same context');
-      }
-      else{
+      if(oldContext != currentContext){
         //Changing global context
-        var oldSection, newSection;
-        if(oldContext == 'changeContextHome'){oldSection = "nav__home";}
-        if(oldContext == 'changeContextAbout'){oldSection = "nav__about";}
-        if(oldContext == 'changeContextContact'){oldSection = "nav__contact";}
-        if(oldContext == 'changeContextWork'){oldSection = "nav__work";}
-
-        if(currentContext == 'changeContextHome'){newSection = "nav__home";}
-        if(currentContext == 'changeContextAbout'){newSection = "nav__about";}
-        if(currentContext == 'changeContextContact'){newSection = "nav__contact";}
-        if(currentContext == 'changeContextWork'){newSection = "nav__work";}
-
+        for ( i=-1 ; ++i < aContexts.length ; ) {
+          ( oldContext == aContexts[i] ) && ( oldSection = aSections[i], oldButton = aButtons[i]  );
+          ( currentContext == aContexts[i] ) && ( newSection = aSections[i], newButton = aButtons[i] );
+        };
+        
         var oldContextSection = document.querySelector('.'+oldSection);
         oldContextSection.style.animationName="section_animation_out";
         oldContextSection.style.animationDuration=".5s";
@@ -47,19 +62,7 @@
           newContextSection.style.animationFillMode="forwards";
         }, 500);
 
-        //Changin speed button
-
-        var oldButton, newButton;
-        if(oldContext == 'changeContextHome'){oldButton = "_home";}
-        if(oldContext == 'changeContextAbout'){oldButton = "_about";}
-        if(oldContext == 'changeContextContact'){oldButton = "_contact";}
-        if(oldContext == 'changeContextWork'){oldButton = "_work";}
-
-        if(currentContext == 'changeContextHome'){newButton = "_home";}
-        if(currentContext == 'changeContextAbout'){newButton = "_about";}
-        if(currentContext == 'changeContextContact'){newButton = "_contact";}
-        if(currentContext == 'changeContextWork'){newButton = "_work";}
-
+        //Changing speed button
         var oldContextButton = document.querySelector('.'+oldButton);
         oldContextButton.style.top="-150px";
         setTimeout(function(){
@@ -68,35 +71,13 @@
         }, 500);
       }
     }
-    home.addEventListener('click', function(){
-      oldContext = currentContext;
-      currentContext = "changeContextHome";
-      changeContext(this);
-    });
-    about.addEventListener('click', function(){
-      oldContext = currentContext;
-      currentContext = "changeContextAbout";
-      changeContext(this);
-    });
-    contact.addEventListener('click', function(){
-      oldContext = currentContext;
-      currentContext = "changeContextContact";
-      changeContext(this);
-    });
-    work.addEventListener('click', function(){
-      oldContext = currentContext;
-      currentContext = "changeContextWork";
-      changeContext(this);
-    });
   }
 
   var affichageWork = function() {
 
     var works = document.querySelector('.nav__work');
-
-    i=1;
-
-    function hideAll(works) {
+    //On compresse d'abord chaque work
+    function compressAll(works) {
       i=1;
       for( ; ++i<works.children.length ; ) {
         works.children[i].className="canBeHovered";
@@ -113,24 +94,25 @@
     };
 
     var aEventListener = [];
-
+    //On ajoute un addEventListener sur chaque work
     for( ; ++i<works.children.length ; ) {
       works.children[i].newID = i;
       aEventListener[i] = works.children[i].addEventListener('click', function() {
         showWork(this);
       })
     }
-
+    //On masque d'abord tout les autres works, sauf celui sur lequel on vient de cliquer, et ensuite on décompresse ce dernier
     function showWork(work) {
-      if (work.className == "scoped") {
-        //
-      }
-      else {
+      if (work.className != "scoped") {
+
         i=1;
+        //On masque tout les works n'ayant pas la class 'scoped'
         for( ; ++i<works.children.length ; ) {
             works.children[i].className='disableWork';
         }
+
         i=1;
+        //On désactive TOUT les works et on réactive le bon
         setTimeout(function(){
           for( ; ++i<works.children.length ; ) {
               works.children[i].style.display='none';
@@ -147,11 +129,13 @@
           work.removeEventListener("click", aEventListener[work.newID]);
         }, 600);
       }
+      //On ajoute un addEventListener sur le boutton du travail
       work.children[1].children[0].addEventListener("click", function() {
         hideWork(this);
       })
-    }
 
+    }
+    //On compresse le travail et on raffiche tout les autres travaux, eux aussi compressés
     function hideWork(work) {
       i=1;
       var article = work.parentNode.parentNode;
@@ -172,11 +156,13 @@
       }, 300);
     }
 
-    hideAll(works);
+    compressAll(works);
 
   }
 
+  var init = function() {
 
+  }
   changementDeSection();
   affichageWork();
 
