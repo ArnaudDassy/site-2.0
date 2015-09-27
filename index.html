@@ -20,30 +20,30 @@
           <h2 class="toHide">Menu Rapide</h2>
           <ul>
             <div class="_home ball">
-              <li>H</li>
+              <a href="#home"><li>H<span>ome</span></li></a>
               <div></div>
             </div>
             <div class="_about ball">
-              <li>A</li>
+              <a href="#about"><li>A<span>bout</span></li></a>
               <div></div>
             </div>
             <div class="_work ball">
-              <li>W</li>
+              <a href="#work"><li>W<span>ork</span></li></a>
               <div></div>
             </div>
             <div class="_contact ball">
-              <li>C</li>
+              <a href="#contact"><li>C<span>ontact</span></li></a>
               <div></div>
             </div>
           </ul>
         </nav>
-        <section class="nav__home nav">
+        <section class="nav__home nav" id="home">
           <h2 class="toHide">Home</h2>
           <p class="header"><span class="retourChariot name">Arnaud Dassy</span><span class="retourChariot function">Web Developer</span></p>
           <q><span class="retourChariot">Design is for <em>Artists</em>,</span>
           <span class="retourChariot">Development is for <b>Geniuses</b>.</span></q>
         </section>
-        <section class="nav__about nav">
+        <section class="nav__about nav" id="about">
           <h2>About me</h2>
           <p>I'm 20, I'm a web developer & I'm the guy you need !</p>
           <p class="skillHeader">Skills</p>
@@ -98,7 +98,7 @@
       			</div>
           </div>
         </section>
-        <section class="nav__work nav">
+        <section class="nav__work nav" id="work">
           <h2 class="toHide">Works</h2>
           <h2>I know I'm amazing!</h2>
           <article class="scoped">
@@ -297,14 +297,14 @@
             </div>
           </article>
         </section>
-        <section class="nav__contact nav">
+        <section class="nav__contact nav" id="contact">
           <h2 class="toHide">Contact</h2>
           <h2>Any idea or project ?</h2>
-          <form action="">
+          <form action="index.html" method="post">
             <div><label for="name">Name</label><input type="text" name="name" id="name"></div>
             <div><label for="object">Object</label><input type="text" name="object" id="object"></div>
             <div><label for="mail">Mail</label><input type="text" name="mail" id="mail"></div>
-            <div class="containerTextContact"><label for="msg">Message</label><textarea name="msg" rows="3" cols="40" id="msg"></textarea></div>
+            <div class="containerTextContact"><label for="msg">Message</label><textarea name="msg" rows="5" cols="40" id="msg"></textarea></div>
             <div class="buttonSubmitForm"><input type="submit" value="Send"></div>
           </form>
         </section>

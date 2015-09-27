@@ -85,7 +85,11 @@ body {
 
 section {
   position: relative;
-  margin: 240px 0;
+  margin: 336px 0;
+}
+
+section + nav {
+  display: none;
 }
 
 .nav {
@@ -167,24 +171,20 @@ li {
 
 .menu__ball {
   text-align: center;
-  position: relative;
-}
-.menu__ball ._home {
-  top: -48px;
+  position: fixed;
+  left: 10px;
 }
 .menu__ball ul {
   padding: 0;
+  margin: 0;
 }
 .menu__ball ul div {
   display: block;
   width: 100%;
-  position: absolute;
-  top: -350px;
-  margin: 0;
+  margin: 12px 0;
   padding: 0;
-  text-align: center;
+  text-align: left;
   transition: 0.3s linear all;
-  top: -150px;
 }
 .menu__ball ul div div {
   display: inline-block;
@@ -192,12 +192,11 @@ li {
   height: 50px;
   border-radius: 25px;
   transition: 0.2s linear all;
-  top: 0;
-  margin: 0;
+  margin: 0 0 0 2px;
   animation: menu_animation_out 0.5s;
   z-index: 0;
 }
-.menu__ball ul div li {
+.menu__ball ul div a {
   position: absolute;
   display: inline-block;
   color: white;
@@ -205,9 +204,22 @@ li {
   height: 50px;
   line-height: 50px;
   z-index: 1;
+  padding: 0;
+  text-align: center;
+  text-shadow: 1px 1px black;
+  text-decoration: none;
 }
-.menu__ball ul div li:hover + div {
-  animation: menu_animation_in 0.5s forwards;
+.menu__ball ul div a span {
+  background-color: transparent;
+  display: inline;
+  left: -150px;
+}
+.menu__ball ul div a:hover + div {
+  border-radius: 12px;
+  width: 150px;
+}
+.menu__ball ul div a:hover span {
+  left: 37px;
 }
 
 .menu__bottom {
@@ -231,6 +243,7 @@ li {
 
 .nav__home {
   display: block;
+  margin-top: 144px;
 }
 
 .nav__about p {
@@ -300,7 +313,7 @@ li {
 }
 
 form {
-  width: 60%;
+  width: 900px;
   margin: 0 auto;
   font-size: 2rem;
   font-family: "Futura Bold";
@@ -326,14 +339,14 @@ form .buttonSubmitForm {
 }
 form .buttonSubmitForm input {
   width: 50%;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   transition: 0.3s all linear;
   border: 4px solid black;
 }
 form .buttonSubmitForm input:hover {
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: black;
 }
 form .containerTextContact {
   border: none;
@@ -368,7 +381,7 @@ form .containerTextContact label {
   display: none;
   text-align: left;
   float: right;
-  padding: 12px;
+  padding: 0 12px;
   width: 65%;
   font-family: "Futura Book";
   font-size: 1.5rem;
@@ -481,6 +494,10 @@ q:after, q::before {
 }
 .nav__work .scoped dl {
   display: block;
+}
+
+.nav__contact {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

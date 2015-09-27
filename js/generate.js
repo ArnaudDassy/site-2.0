@@ -5,72 +5,7 @@
 
   var changementDeSection = function() {
 
-    var aContexts = [
-      "changeContextHome",
-      "changeContextAbout",
-      "changeContextWork",
-      "changeContextContact"
-    ],
-    aSections = [
-      "nav__home",
-      "nav__about",
-      "nav__work",
-      "nav__contact"
-    ],
-    aButtons = [
-      "_home",
-      "_about",
-      "_work",
-      "_contact"
-    ],
-    i = -1,
-    oldContext = "changeContextHome",
-    currentContext = oldContext,
-    oldSection, newSection, oldButton, newButton;
 
-    for ( ; ++i < aContexts.length ; ) {
-      document.querySelector('.'+aContexts[i]).addEventListener("click",function(){
-        oldContext = currentContext;
-        currentContext = this.className;
-        changeContext(this);
-      });
-    }
-
-    for ( i=0 ; ++i < aSections.length ; ) {
-      document.querySelector('.'+aSections[i]).style.display = "none";
-    }
-
-    function changeContext(ctx) {
-      if(oldContext != currentContext){
-        //Changing global context
-        for ( i=-1 ; ++i < aContexts.length ; ) {
-          ( oldContext == aContexts[i] ) && ( oldSection = aSections[i], oldButton = aButtons[i]  );
-          ( currentContext == aContexts[i] ) && ( newSection = aSections[i], newButton = aButtons[i] );
-        };
-        
-        var oldContextSection = document.querySelector('.'+oldSection);
-        oldContextSection.style.animationName="section_animation_out";
-        oldContextSection.style.animationDuration=".5s";
-        oldContextSection.style.animationFillMode="forwards";
-        setTimeout(function() {oldContextSection.style.display="none"}, 500);
-        setTimeout(function(){
-          var newContextSection = document.querySelector('.'+newSection);
-          newContextSection.style.display="block";
-          newContextSection.style.opacity="0";
-          newContextSection.style.animationName="section_animation_in";
-          newContextSection.style.animationDuration=".5s";
-          newContextSection.style.animationFillMode="forwards";
-        }, 500);
-
-        //Changing speed button
-        var oldContextButton = document.querySelector('.'+oldButton);
-        oldContextButton.style.top="-150px";
-        setTimeout(function(){
-          var newContextButton = document.querySelector('.'+newButton);
-          newContextButton.style.top="-48px";
-        }, 500);
-      }
-    }
   }
 
   var affichageWork = function() {
@@ -162,7 +97,81 @@
 
   var init = function() {
 
+    document.querySelector('nav').style.display="none";
+    document.querySelector('section+nav').style.display="block";
+
+    var aContexts = [
+      "changeContextHome",
+      "changeContextAbout",
+      "changeContextWork",
+      "changeContextContact" ],
+    aSections = [
+      "nav__home",
+      "nav__about",
+      "nav__work",
+      "nav__contact" ],
+    aButtons = [
+      "_home",
+      "_about",
+      "_work",
+      "_contact" ],
+    i = -1,
+    oldContext = "changeContextHome",
+    currentContext = oldContext,
+    oldSection, newSection, oldButton, newButton, oSection;
+
+    for ( ; ++i < aContexts.length ; ) {
+      document.querySelector('.'+aContexts[i]).addEventListener("click",function(){
+        oldContext = currentContext;
+        currentContext = this.className;
+        changeContext(this);
+      });
+    }
+
+    for ( i=0 ; ++i < aSections.length ; ) {
+      document.querySelector('.'+aSections[i]).style.display = "none";
+    }
+    for ( i=-1 ; ++i < aSections.length ; ) {
+      document.querySelector('.'+aSections[i]).style.margin = "0";
+    }
+
+
+    function changeContext(ctx) {
+      if(oldContext != currentContext){
+
+        for ( i=-1 ; ++i < aContexts.length ; ) {
+          ( oldContext == aContexts[i] ) && ( oldSection = aSections[i], oldButton = aButtons[i]  );
+          ( currentContext == aContexts[i] ) && ( newSection = aSections[i], newButton = aButtons[i] );
+        };
+
+        var oldContextSection = document.querySelector('.'+oldSection);
+
+        oldContextSection.style.animationName="section_animation_out";
+        oldContextSection.style.animationDuration=".5s";
+        oldContextSection.style.animationFillMode="forwards";
+
+        setTimeout(function() {oldContextSection.style.display="none"}, 500);
+        setTimeout(function(){
+          var newContextSection = document.querySelector('.'+newSection);
+          newContextSection.style.display="block";
+          newContextSection.style.opacity="0";
+          newContextSection.style.animationName="section_animation_in";
+          newContextSection.style.animationDuration=".5s";
+          newContextSection.style.animationFillMode="forwards";
+        }, 500);
+
+        var oldContextButton = document.querySelector('.'+oldButton);
+        oldContextButton.style.top="-150px";
+        setTimeout(function(){
+          var newContextButton = document.querySelector('.'+newButton);
+          newContextButton.style.top="-48px";
+        }, 500);
+      }
+    }
+
   }
+
+  init();
   changementDeSection();
   affichageWork();
 
