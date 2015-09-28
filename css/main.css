@@ -69,6 +69,14 @@
   font-family: "Futura Medium";
   src: url("../font/Futura LT Folder/Futura LT Medium.otf") format("opentype");
 }
+.messageSend {
+  padding: 12px;
+  margin-top: 24px;
+  border: 4px solid green;
+  font-size: 2rem;
+  color: green;
+}
+
 .nav__work .imgWork {
   float: left;
   width: 30%;
