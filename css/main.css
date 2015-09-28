@@ -270,7 +270,7 @@ li {
   font-size: 5rem;
 }
 .nav__about .skillContainer {
-  width: 80%;
+  width: 78%;
   margin: 0 auto;
 }
 .nav__about .skill {
@@ -386,7 +386,7 @@ form .containerTextContact label {
   height: 192px;
   transition: 0.2s all linear;
 }
-.nav__work dl {
+.nav__work img + dl {
   display: none;
   text-align: left;
   float: right;
@@ -396,22 +396,25 @@ form .containerTextContact label {
   font-size: 1.5rem;
   margin-top: 0;
 }
-.nav__work dl dt {
+.nav__work img + dl dt {
   font-family: "Futura Bold";
+  margin-top: 12px;
 }
-.nav__work dl dd {
+.nav__work img + dl dd {
   margin: 0;
   padding-left: 12px;
 }
-.nav__work dl dt, .nav__work dl dd {
+.nav__work img + dl dt, .nav__work img + dl dd {
   display: inline-block;
 }
-.nav__work dl dt.retourChariot {
+.nav__work img + dl dt.retourChariot {
   display: block;
-  margin-top: 12px;
 }
-.nav__work dl dt.retourChariot + dd {
+.nav__work img + dl dt.retourChariot + dd {
   padding-left: 0;
+}
+.nav__work img + dl div {
+  display: block;
 }
 .nav__work div + div {
   display: none;
@@ -421,7 +424,7 @@ form .containerTextContact label {
   opacity: 1;
   position: static;
   display: inline-block;
-  width: 10%;
+  width: 50%;
   padding: 12px;
   font: 1.5rem "Futura Bold";
   border: 4px solid black;
@@ -520,11 +523,26 @@ q:after, q::before {
   }
 
   .nav__work .canBeHovered {
-    height: 168px;
+    width: 168px !important;
+    height: 168px !important;
   }
   .nav__work .canBeHovered div img {
-    width: 168px;
-    height: 168px;
+    width: 168px !important;
+    height: 168px !important;
+  }
+
+  .nav__work article.scoped > div {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .nav__work article.scoped img {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+  .nav__work article.scoped dl {
+    width: 100%;
+    padding: 0;
   }
 }
 @media screen and (max-width: 1535px) {
@@ -590,11 +608,12 @@ q:after, q::before {
   }
 
   .nav__work .canBeHovered {
-    height: 144px;
+    width: 144px !important;
+    height: 144px !important;
   }
   .nav__work .canBeHovered div img {
-    width: 144px;
-    height: 144px;
+    width: 144px !important;
+    height: 144px !important;
   }
 
   h2, .header {
