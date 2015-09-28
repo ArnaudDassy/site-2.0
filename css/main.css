@@ -150,7 +150,7 @@ li {
   list-style-type: none;
   font-size: 2rem;
   font-weight: bolder;
-  padding-bottom: 24px;
+  padding-bottom: 6px;
 }
 
 .home, ._home div {
@@ -234,7 +234,7 @@ li {
 .menu__bottom ul li {
   opacity: 0;
   animation: fade_in_then_out 1s;
-  animation-delay: 1s;
+  animation-delay: 0.4s;
   transition: 0.3s ease all;
 }
 .menu__bottom ul > div:hover li {
@@ -244,6 +244,22 @@ li {
 .nav__home {
   display: block;
   margin-top: 144px;
+}
+.nav__home div {
+  width: 300px;
+  margin: 48px auto;
+  margin-bottom: 0;
+  position: relative;
+}
+.nav__home div img {
+  width: 125px;
+  height: 150px;
+}
+.nav__home div img + img {
+  position: absolute;
+  left: 80px;
+  height: auto;
+  top: 40px;
 }
 
 .nav__about p {
@@ -263,28 +279,24 @@ li {
   padding: 2, 5%;
   margin-bottom: 0;
 }
-.nav__about .skill h4 {
+.nav__about .skill p {
   width: 90%;
   text-align: center;
-  color: #474d5d;
+  color: black;
   position: relative;
   margin-bottom: 0;
-}
-.nav__about .skill h4 span {
-  position: absolute;
-  right: 0;
+  font: 1rem "Futura Bold";
 }
 .nav__about .ladderFull {
   width: 90%;
   margin-top: 5px;
-  background-color: #e1e1e3;
-  height: 15px;
-  border-radius: 7.5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;
+  background-color: white;
+  height: 30px;
+  padding: 3px;
+  border: 4px solid black;
 }
 .nav__about .ladderSkill {
-  height: 15px;
-  border-radius: 7.5px;
+  height: 30px;
   background-color: black;
 }
 .nav__about .HTMLCSS {
@@ -365,7 +377,6 @@ form .containerTextContact label {
 
 .nav__work article {
   display: inline-block;
-  width: 192px;
   height: 192px;
   margin: 12px;
   position: relative;
@@ -435,6 +446,10 @@ form .containerTextContact label {
 .nav__work h3 {
   bottom: 1em;
 }
+.nav__work .canBeHovered div img {
+  width: 192px;
+  height: 192px;
+}
 .nav__work .canBeHovered:hover {
   cursor: pointer;
 }
@@ -460,7 +475,7 @@ form .containerTextContact label {
 }
 
 .header {
-  font-size: 10rem;
+  font-size: 8rem;
   margin: 0;
 }
 
@@ -498,6 +513,31 @@ q:after, q::before {
 
 .nav__contact {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 1651px) {
+  .nav__work > div {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .nav__work .canBeHovered {
+    height: 168px;
+  }
+  .nav__work .canBeHovered div img {
+    width: 168px;
+    height: 168px;
+  }
+}
+@media screen and (max-width: 1535px) {
+  h2, .header {
+    font-size: 7rem;
+  }
+}
+@media screen and (max-width: 1410px) {
+  .nav__about p {
+    font-size: 2.5rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

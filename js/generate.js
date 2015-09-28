@@ -3,36 +3,30 @@
 
   var i = 1;
 
-  var changementDeSection = function() {
-
-
-  }
-
   var affichageWork = function() {
 
     var works = document.querySelector('.nav__work');
+    console.log(works.children[2]);
     //On compresse d'abord chaque work
     function compressAll(works) {
-      i=1;
-      for( ; ++i<works.children.length ; ) {
-        works.children[i].className="canBeHovered";
-        works.children[i].style.opacity='0';
-        works.children[i].style.width='192px';
-        works.children[i].style.height='192px';
-        works.children[i].children[0].children[3].style.display="none";
-        works.children[i].children[0].children[4].style.display="none";
-        works.children[i].children[0].children[2].className="";
-        works.children[i].children[1].style.display="none";
-        works.children[i].style.display='inline-block';
-        works.children[i].style.opacity='1';
+      i=-1;
+      for( ; ++i<works.children[2].children.length ; ) {
+        works.children[2].children[i].className="canBeHovered";
+        works.children[2].children[i].style.opacity='0';
+        works.children[2].children[i].children[0].children[3].style.display="none";
+        works.children[2].children[i].children[0].children[4].style.display="none";
+        works.children[2].children[i].children[0].children[2].className="";
+        works.children[2].children[i].children[1].style.display="none";
+        works.children[2].children[i].style.display='inline-block';
+        works.children[2].children[i].style.opacity='1';
       }
     };
 
     var aEventListener = [];
     //On ajoute un addEventListener sur chaque work
-    for( ; ++i<works.children.length ; ) {
-      works.children[i].newID = i;
-      aEventListener[i] = works.children[i].addEventListener('click', function() {
+    for( i=-1 ; ++i<works.children[2].children.length ; ) {
+      works.children[2].children[i].newID = i;
+      aEventListener[i] = works.children[2].children[i].addEventListener('click', function() {
         showWork(this);
       })
     }
@@ -40,17 +34,17 @@
     function showWork(work) {
       if (work.className != "scoped") {
 
-        i=1;
+        i=-1;
         //On masque tout les works n'ayant pas la class 'scoped'
-        for( ; ++i<works.children.length ; ) {
-            works.children[i].className='disableWork';
+        for( ; ++i<works.children[2].children.length ; ) {
+            works.children[2].children[i].className='disableWork';
         }
 
-        i=1;
+        i=-1;
         //On désactive TOUT les works et on réactive le bon
         setTimeout(function(){
-          for( ; ++i<works.children.length ; ) {
-              works.children[i].style.display='none';
+          for( ; ++i<works.children[2].children.length ; ) {
+              works.children[2].children[i].style.display='none';
           }
           work.className="scoped";
           work.style.display='inline-block';
@@ -72,7 +66,7 @@
     }
     //On compresse le travail et on raffiche tout les autres travaux, eux aussi compressés
     function hideWork(work) {
-      i=1;
+      i=-1;
       var article = work.parentNode.parentNode;
       article.style.opacity='0';
       article.style.width='192px';
@@ -82,10 +76,10 @@
       article.children[0].children[2].className="";
       article.children[1].style.display="none";
       setTimeout(function(){
-        for( ; ++i<works.children.length ; ) {
-            works.children[i].style.display='inline-block';
-            works.children[i].className='canBeHovered';
-            works.children[i].style.opacity='1';
+        for( ; ++i<works.children[2].children.length ; ) {
+            works.children[2].children[i].style.display='inline-block';
+            works.children[2].children[i].className='canBeHovered';
+            works.children[2].children[i].style.opacity='1';
 
         }
       }, 300);
@@ -172,7 +166,6 @@
   }
 
   init();
-  changementDeSection();
   affichageWork();
 
 })();
