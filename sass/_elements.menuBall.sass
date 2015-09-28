@@ -1,0 +1,45 @@
+.menu__ball
+  text-align: center
+  position: fixed
+  left: 10px
+  ul
+    padding: 0
+    margin: 0
+    div
+      display: block
+      width: 100%
+      margin: $baseSpace/2 0
+      padding: 0
+      text-align: left
+      transition: 0.3s linear all
+      div
+        display: inline-block
+        width: 50px
+        height: 50px
+        border-radius: 25px
+        transition: 0.2s linear all
+        margin: 0 0 0 2px
+        animation: menu_animation_out 0.5s
+        z-index: 0
+      a
+        position: absolute
+        display: inline-block
+        color: white
+        width: 50px
+        height: 50px
+        line-height: 50px
+        z-index: 1
+        padding: 0
+        text-align: center
+        text-shadow: 1px 1px  black
+        text-decoration: none
+        span
+          background-color: transparent
+          display: inline
+          left: -150px
+        &:hover
+          &+div
+            border-radius: $baseSpace/2
+            width: 150px
+          span
+            left: 37px

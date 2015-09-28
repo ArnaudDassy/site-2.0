@@ -57,7 +57,7 @@
   font-family: "Futura Book";
   src: url("../font/Futura LT Folder/Futura LT Book.otf") format("opentype");
 }
-@font-face {
+@font-facex {
   font-family: "Futura Bold";
   src: url("../font/Futura LT Folder/Futura LT Bold.otf") format("opentype");
 }
@@ -69,20 +69,6 @@
   font-family: "Futura Medium";
   src: url("../font/Futura LT Folder/Futura LT Medium.otf") format("opentype");
 }
-.messageSend {
-  padding: 12px;
-  margin-top: 24px;
-  border: 4px solid green;
-  font-size: 2rem;
-  color: green;
-}
-
-.nav__work .imgWork {
-  float: left;
-  width: 30%;
-  height: auto;
-}
-
 body {
   font-family: "Futura Book";
   width: 80%;
@@ -381,6 +367,10 @@ form .containerTextContact label {
   width: 100%;
 }
 
+.nav__contact {
+  margin-bottom: 0;
+}
+
 .nav__work article {
   display: inline-block;
   height: 192px;
@@ -473,6 +463,15 @@ form .containerTextContact label {
   position: static;
   display: none;
 }
+.nav__work .scoped {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+}
+.nav__work .scoped dl {
+  display: block;
+}
 
 .disableWork {
   animation: section_animation_out 0.5s forwards;
@@ -510,18 +509,18 @@ q:after, q::before {
   content: "";
 }
 
-.nav__work .scoped {
-  display: inline-block;
-  width: 100%;
-  height: auto;
-  opacity: 1;
-}
-.nav__work .scoped dl {
-  display: block;
+.messageSend {
+  padding: 12px;
+  margin-top: 24px;
+  border: 4px solid green;
+  font-size: 2rem;
+  color: green;
 }
 
-.nav__contact {
-  margin-bottom: 0;
+.nav__work .imgWork {
+  float: left;
+  width: 30%;
+  height: auto;
 }
 
 @media screen and (max-width: 1651px) {

@@ -1,0 +1,16 @@
+.menu__bottom
+  position: fixed
+  bottom: 0
+  width: 80%
+  background-color: white
+  ul
+    margin: 0
+    li
+      opacity: 0
+      animation: fade_in_then_out 1s
+      animation-delay: .4s
+      transition: 0.3s ease all
+  ul>div
+    &:hover
+      li
+        opacity: 1
