@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAa;EACX,QAAQ,EAAE,KAAK;EACf,MAAM,EAAE,CAAC;EACT,KAAK,EAAE,GAAG;EACV,gBAAgB,EAAE,KAAK;;AACvB,gBAAE;EACA,MAAM,EAAE,CAAC;;AACT,mBAAE;EACA,OAAO,EAAE,CAAC;EACV,SAAS,EAAE,mBAAmB;EAC9B,eAAe,EAAE,IAAG;EACpB,UAAU,EAAE,aAAa;;AAGzB,+BAAE;EACA,OAAO,EAAE,CAAC",
+"sources": ["../sass/elements.menuBottom.sass"],
+"names": [],
+"file": "elements.menuBottom.css"
+}

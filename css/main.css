@@ -57,7 +57,7 @@
   font-family: "Futura Book";
   src: url("../font/Futura LT Folder/Futura LT Book.otf") format("opentype");
 }
-@font-facex {
+@font-face {
   font-family: "Futura Bold";
   src: url("../font/Futura LT Folder/Futura LT Bold.otf") format("opentype");
 }
@@ -74,7 +74,6 @@ body {
   width: 80%;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 120px;
 }
 
 section {
@@ -490,7 +489,6 @@ form .containerTextContact label {
 .name {
   font-family: "Futura Bold";
   margin-bottom: 24px;
-  margin-top: 72px;
 }
 
 .function {
