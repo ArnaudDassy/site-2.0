@@ -54,7 +54,7 @@
           work.children[0].children[3].style.display="block";
           work.children[0].children[4].style.display="block";
           work.children[0].children[2].className="imgWork";
-          work.children[1].style.display="block";
+          work.children[1].style.display="flex";
           work.removeEventListener("click", aEventListener[work.newID]);
         }, 600);
       }

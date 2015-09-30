@@ -78,7 +78,7 @@ body {
 
 section {
   position: relative;
-  margin: 336px 0;
+  padding: 336px 0;
 }
 
 section + nav {
@@ -164,6 +164,7 @@ li {
 
 .menu__ball {
   text-align: center;
+  display: none !important;
   position: fixed;
   left: 10px;
 }
@@ -216,6 +217,7 @@ li {
 }
 
 .menu__bottom {
+  display: none !important;
   position: fixed;
   bottom: 0;
   width: 80%;
@@ -236,7 +238,7 @@ li {
 
 .nav__home {
   display: block;
-  margin-top: 144px;
+  padding-top: 144px;
 }
 .nav__home div {
   width: 300px;
@@ -316,26 +318,9 @@ li {
 }
 
 form {
-  width: 900px;
   margin: 0 auto;
   font-size: 2rem;
   font-family: "Futura Bold";
-}
-form div {
-  margin: 24px;
-  border-bottom: 4px solid black;
-}
-form div label {
-  display: inline-block;
-  width: 20%;
-  text-align: left;
-  cursor: pointer;
-}
-form div input {
-  width: 79%;
-  border: none;
-  cursor: pointer;
-  outline: none;
 }
 form .buttonSubmitForm {
   border: none;
@@ -356,7 +341,6 @@ form .containerTextContact {
 }
 form .containerTextContact textarea {
   resize: none;
-  border: 4px solid black;
   font-family: "Futura Book";
   width: 100%;
   cursor: pointer;
@@ -367,7 +351,7 @@ form .containerTextContact label {
 }
 
 .nav__contact {
-  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .nav__work article {
@@ -395,7 +379,6 @@ form .containerTextContact label {
 }
 .nav__work img + dl dt {
   font-family: "Futura Bold";
-  margin-top: 12px;
 }
 .nav__work img + dl dd {
   margin: 0;
