@@ -1,82 +1,82 @@
-.nav__work
-  article
-    display: inline-block
-    height: $baseSpace*8
-    margin: $baseSpace/2
-    position: relative
-    opacity: 1
-    transition: 0.3s ease all
-  img
-    width: $baseSpace*8
-    height: $baseSpace*8
-    transition: .2s all linear
-  img+dl
-    display: none
-    text-align: left
-    float: right
-    padding: 0 $baseSpace/2
-    width: 65%
-    font-family: "Futura Book"
-    font-size: 1.5rem
-    margin-top: 0
-    dt
-      font-family: "Futura Bold"
-    dd
-      margin: 0
-      padding-left: $baseSpace/2
-    dt, dd
-      display: inline-block
-    dt.retourChariot
-      display: block
-      &+dd
-        padding-left: 0
-    div
-      display: block
-  div+div
-    display: none
-    p
-      clear: both
-      opacity: 1
-      position: static
-      display: inline-block
-      width: 50%
-      padding: 12px
-      font: 1.5rem 'Futura Bold'
-      border: 4px solid black
-      cursor: pointer
-      &:hover
-        background-color: black
-        color: white
-  h3, p
-    position: absolute
-    left: $baseSpace/2
-    color: black
-    opacity: 0
-    transition: .2s all linear
-  p
-    bottom: 0
-  h3
-    bottom: 1em
-  .canBeHovered
-    div img
-      width: 192px
-      height: 192px
-    &:hover
-      cursor: pointer
-      img
-        opacity: 0.4
-      h3, p
-        opacity: 1
-  .clearFloat
-    clear: both
-    position: static
-    display: none
-  .scoped
-    display: inline-block
-    width: 100%
-    height: auto
-    opacity: 1
-    dl
-      display: block
-.disableWork
-  animation: section_animation_out 0.5s forwards
+// .nav__work
+//   article
+//     display: inline-block
+//     height: $baseSpace*8
+//     margin: $baseSpace/2
+//     position: relative
+//     opacity: 1
+//     transition: 0.3s ease all
+//   img
+//     width: $baseSpace*8
+//     height: $baseSpace*8
+//     transition: .2s all linear
+//   img+dl
+//     display: none
+//     text-align: left
+//     float: right
+//     padding: 0 $baseSpace/2
+//     width: 65%
+//     font-family: "Futura Book"
+//     font-size: 1.5rem
+//     margin-top: 0
+//     dt
+//       font-family: "Futura Bold"
+//     dd
+//       margin: 0
+//       padding-left: $baseSpace/2
+//     dt, dd
+//       display: inline-block
+//     dt.retourChariot
+//       display: block
+//       &+dd
+//         padding-left: 0
+//     div
+//       display: block
+//   div+div
+//     display: none
+//     p
+//       clear: both
+//       opacity: 1
+//       position: static
+//       display: inline-block
+//       width: 50%
+//       padding: 12px
+//       font: 1.5rem 'Futura Bold'
+//       border: 4px solid black
+//       cursor: pointer
+//       &:hover
+//         background-color: black
+//         color: white
+//   h3, p
+//     position: absolute
+//     left: $baseSpace/2
+//     color: black
+//     opacity: 0
+//     transition: .2s all linear
+//   p
+//     bottom: 0
+//   h3
+//     bottom: 1em
+//   .canBeHovered
+//     div img
+//       width: 192px
+//       height: 192px
+//     &:hover
+//       cursor: pointer
+//       img
+//         opacity: 0.4
+//       h3, p
+//         opacity: 1
+//   .clearFloat
+//     clear: both
+//     position: static
+//     display: none
+//   .scoped
+//     display: inline-block
+//     width: 100%
+//     height: auto
+//     opacity: 1
+//     dl
+//       display: block
+// .disableWork
+//   animation: section_animation_out 0.5s forwards

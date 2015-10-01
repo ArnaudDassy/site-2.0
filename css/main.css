@@ -78,7 +78,7 @@ body {
 
 section {
   position: relative;
-  padding: 336px 0;
+  padding: 1px 0;
 }
 
 section + nav {
@@ -97,8 +97,7 @@ h1 {
 
 h2 {
   font-size: 8rem;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin: 0;
 }
 
 h3 {
@@ -218,27 +217,10 @@ li {
 
 .menu__bottom {
   display: none !important;
-  position: fixed;
-  bottom: 0;
-  width: 80%;
-  background-color: white;
-}
-.menu__bottom ul {
-  margin: 0;
-}
-.menu__bottom ul li {
-  opacity: 0;
-  animation: fade_in_then_out 1s;
-  animation-delay: 0.4s;
-  transition: 0.3s ease all;
-}
-.menu__bottom ul > div:hover li {
-  opacity: 1;
 }
 
 .nav__home {
   display: block;
-  padding-top: 144px;
 }
 .nav__home div {
   width: 300px;
@@ -263,6 +245,7 @@ li {
 }
 .nav__about .skillHeader {
   font-size: 5rem;
+  margin: 0;
 }
 .nav__about .skillContainer {
   width: 78%;
@@ -271,6 +254,7 @@ li {
 .nav__about .skill {
   display: inline-block;
   margin: 12px;
+  width: 40%;
 }
 .nav__about .skill p {
   width: 100%;
@@ -287,6 +271,7 @@ li {
   height: 30px;
   padding: 3px;
   border: 4px solid black;
+  width: 100%;
 }
 .nav__about .ladderSkill {
   height: 30px;
@@ -352,111 +337,6 @@ form .containerTextContact label {
 
 .nav__contact {
   padding-bottom: 0;
-}
-
-.nav__work article {
-  display: inline-block;
-  height: 192px;
-  margin: 12px;
-  position: relative;
-  opacity: 1;
-  transition: 0.3s ease all;
-}
-.nav__work img {
-  width: 192px;
-  height: 192px;
-  transition: 0.2s all linear;
-}
-.nav__work img + dl {
-  display: none;
-  text-align: left;
-  float: right;
-  padding: 0 12px;
-  width: 65%;
-  font-family: "Futura Book";
-  font-size: 1.5rem;
-  margin-top: 0;
-}
-.nav__work img + dl dt {
-  font-family: "Futura Bold";
-}
-.nav__work img + dl dd {
-  margin: 0;
-  padding-left: 12px;
-}
-.nav__work img + dl dt, .nav__work img + dl dd {
-  display: inline-block;
-}
-.nav__work img + dl dt.retourChariot {
-  display: block;
-}
-.nav__work img + dl dt.retourChariot + dd {
-  padding-left: 0;
-}
-.nav__work img + dl div {
-  display: block;
-}
-.nav__work div + div {
-  display: none;
-}
-.nav__work div + div p {
-  clear: both;
-  opacity: 1;
-  position: static;
-  display: inline-block;
-  width: 50%;
-  padding: 12px;
-  font: 1.5rem "Futura Bold";
-  border: 4px solid black;
-  cursor: pointer;
-}
-.nav__work div + div p:hover {
-  background-color: black;
-  color: white;
-}
-.nav__work h3, .nav__work p {
-  position: absolute;
-  left: 12px;
-  color: black;
-  opacity: 0;
-  transition: 0.2s all linear;
-}
-.nav__work p {
-  bottom: 0;
-}
-.nav__work h3 {
-  bottom: 1em;
-}
-.nav__work .canBeHovered div img {
-  width: 192px;
-  height: 192px;
-}
-.nav__work .canBeHovered:hover {
-  cursor: pointer;
-}
-.nav__work .canBeHovered:hover img {
-  opacity: 0.4;
-}
-.nav__work .canBeHovered:hover h3, .nav__work .canBeHovered:hover p {
-  opacity: 1;
-}
-.nav__work .clearFloat {
-  clear: both;
-  position: static;
-  display: none;
-}
-.nav__work .scoped {
-  display: inline-block;
-  width: 100%;
-  height: auto;
-  opacity: 1;
-}
-.nav__work .scoped dl {
-  display: block;
-}
-
-.disableWork {
-  animation: section_animation_out 0.5s forwards;
 }
 
 .toHide {
