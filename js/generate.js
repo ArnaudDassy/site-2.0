@@ -109,7 +109,25 @@
     i = -1,
     oldContext = "changeContextHome",
     currentContext = oldContext,
-    oldSection, newSection, oldButton, newButton, oSection;
+    oldSection = "nav__home",
+    newSection = oldSection,
+    oldButton, newButton, oSection;
+
+    //Recenter
+    var $j = jQuery.noConflict();
+
+    $j('.'+newSection).css({
+      top:($j(window).height() - $j('.'+newSection).outerHeight()) / 2
+    });
+
+    $j(window).resize(function() {
+      if( newSection == "nav__home" || newSection == "nav__about"){
+        $j('.'+newSection).css({
+          top:($j(window).height() - $j('.'+newSection).outerHeight()) / 2
+        });
+      }
+    });
+
 
     //add event listener
     for ( ; ++i < aContexts.length ; ) {
@@ -148,6 +166,12 @@
           newContextSection.style.animationName="section_animation_in";
           newContextSection.style.animationDuration=".5s";
           newContextSection.style.animationFillMode="forwards";
+          if( newSection == "nav__home" || newSection == "nav__about"){
+            console.log('ok');
+            $j('.'+newSection).css({
+              top:($j(window).height() - $j('.'+newSection).outerHeight()) / 2
+            });
+          }
           newContextSection.click();
           if(newSection == 'nav__contact'){
             newContextSection.parentNode.style.height='auto';
@@ -163,7 +187,6 @@
         }, 500);
       }
     }
-
   }
 
   init();

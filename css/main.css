@@ -384,35 +384,6 @@ q:after, q::before {
   height: auto;
 }
 
-@media screen and (max-width: 1651px) {
-  .nav__work > div {
-    width: 74%;
-    margin: 0 auto;
-  }
-
-  .nav__work .canBeHovered {
-    width: 168px !important;
-    height: 168px !important;
-  }
-  .nav__work .canBeHovered div img {
-    width: 168px !important;
-    height: 168px !important;
-  }
-
-  .nav__work article.scoped > div {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .nav__work article.scoped img {
-    float: none;
-    display: block;
-    width: 100%;
-  }
-  .nav__work article.scoped dl {
-    width: 100%;
-    padding: 0;
-  }
-}
 @media screen and (max-width: 1535px) {
   h2, .header {
     font-size: 7rem;
@@ -426,10 +397,6 @@ q:after, q::before {
 @media screen and (max-width: 1360px) {
   h2, .header {
     font-size: 6.5rem;
-  }
-
-  .nav__work > div {
-    width: 90%;
   }
 
   .nav__about .skill {
@@ -454,10 +421,6 @@ q:after, q::before {
   }
 }
 @media screen and (max-width: 1151px) {
-  .nav__work > div {
-    width: 100%;
-  }
-
   h2, .header {
     font-size: 5rem;
   }
@@ -473,15 +436,6 @@ q:after, q::before {
 @media screen and (max-width: 980px) {
   .nav__about p {
     font-size: 1.5rem;
-  }
-
-  .nav__work .canBeHovered {
-    width: 144px !important;
-    height: 144px !important;
-  }
-  .nav__work .canBeHovered div img {
-    width: 144px !important;
-    height: 144px !important;
   }
 
   h2, .header {
@@ -546,15 +500,70 @@ q:after, q::before {
   q {
     font-size: 2rem;
   }
+
+  .menu .tabs-style-linemove nav a span {
+    font-size: 0;
+  }
+
+  .menu .icon::before {
+    font-size: 2rem;
+  }
 }
-@media screen and (max-width: 550px) {
-  .menu__bottom ul {
+@media screen and (max-width: 600px) {
+  section {
+    padding: 12px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .nav__about .skill {
+    width: 100%;
+  }
+
+  .nav__about {
+    top: 0 !important;
+  }
+
+  div .content {
+    position: static;
+  }
+
+  form .input__field--kozakura {
+    padding: 0;
+    text-indent: 6px;
+  }
+
+  form .input {
+    width: 80%;
+  }
+
+  div .menu-button {
+    margin-left: 3px;
+    font-size: 1em;
+  }
+
+  .header, h2 {
+    font-size: 2.5rem;
+  }
+
+  q {
+    font-size: 1.3rem;
+  }
+
+  div .card__container--closed .card__caption {
+    padding-bottom: 6px;
+  }
+}
+@media screen and (max-width: 350px) {
+  div .card__container--closed .card__caption {
     display: none;
   }
 
-  section {
-    display: block !important;
-    min-width: 440px;
+  .header, h2 {
+    font-size: 2.2rem;
+  }
+
+  div.wrapper h2 {
+    font-size: 1.5rem;
   }
 }
 

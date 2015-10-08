@@ -393,21 +393,6 @@
           r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
           ga('create','UA-XXXXX-X','auto');ga('send','pageview');
       </script>
-      <script type="text/javascript">// vertical align
-      var $j = jQuery.noConflict();
-        $j(document).ready(function() {
-            $j(window).resize(function() {
-              $j('.nav__home').css({
-                top:($j(window).height() - $j('.nav__home').outerHeight()) / 2
-              });
-            });
-        });
-
-        $j(window).load(function() {
-        // au chargement complet de la page, la fonction resize() est appelée une fois pour initialiser le centrage.
-        $j(window).resize();
-        });
-      </script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>
       <script src="./js/generate.js"></script>
@@ -516,5 +501,8 @@
     			}
     		};
     	</script>
+
+
+
     </body>
 </html>

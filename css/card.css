@@ -175,7 +175,7 @@
 	text-align: left;
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1400px) {
 	.card {
 		width: 46%;
 		padding-bottom: 32.2%;
@@ -190,7 +190,7 @@
 	}
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 610px) {
 	.card {
 		width: 96%;
 		padding-bottom: 67.2%;
