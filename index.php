@@ -17,10 +17,11 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Arnaud Dassy - Web Developer</title>
-        <meta name="description" content="Web Developer">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+        <meta name="Author" content="Arnaud Dassy" />
+      	<meta name="Rev" content="arnaud.dassy@gmail.com" />
+      	<meta name="keywords" content="Arnaud, Dassy, arnauddassy, arnaud, arnau, dassy, infographiste, web, Web, webdesigner, designer, liège, waremme, oreye, developer, web developer" />
+      	<meta name="Description" content="Je suis un étudiant en infographie qui habite près de Waremme ce site est une sorte de portefolio qui présente mes travaux" />
+        <link rel="icon" href="./img/jump.gif" type="image/gif">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/buttons.css">
@@ -98,7 +99,7 @@
             </section>
             <section class="nav__about nav" id="about">
               <h2>About me</h2>
-              <p>I'm 20, I'm a web developer & I'm the guy you need !</p>
+              <p>J'ai 20 ans, je suis web developer, et je suis votre gars !</p>
               <p class="skillHeader">Skills</p>
               <div class="skillContainer">
                 <div class="skill">
@@ -156,7 +157,7 @@
                 <div class="pattern pattern--hidden"></div>
           			<div class="wrapper">
                   <h2 class="toHide">Works</h2>
-                  <h2>I know I'm amazing!</h2>
+                  <h2>Pas trop mal, hein ?</h2>
           				<div class="card">
           					<div class="card__container card__container--closed">
           						<svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
@@ -342,15 +343,16 @@
             </section>
             <section class="nav__contact nav" id="contact">
               <h2 class="toHide">Contact</h2>
-              <h2>Any idea or project ?</h2>
+              <h2>Une idée, un projet ?</h2>
               <form action="index.php" method="post">
                 <div class="input input--kozakura"><input type="text" name="name" id="name" class="input__field input__field--kozakura" ><label for="name" class="input__label input__label--kozakura">Name</label><svg class="graphic graphic--kozakura" preserveAspectRatio="none" viewBox="0 0 1200 60" height="100%" width="300%"><path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></svg></div>
                 <div class="input input--kozakura"><input type="text" name="object" id="object" class="input__field input__field--kozakura" ><label for="object" class="input__label input__label--kozakura">Object</label><svg class="graphic graphic--kozakura" preserveAspectRatio="none" viewBox="0 0 1200 60" height="100%" width="300%"><path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></svg></div>
                 <div class="input input--kozakura"><input type="text" name="mail" id="mail" class="input__field input__field--kozakura" ><label for="mail" class="input__label input__label--kozakura">Mail</label><svg class="graphic graphic--kozakura" preserveAspectRatio="none" viewBox="0 0 1200 60" height="100%" width="300%"><path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></svg></div>
                 <div class="message input input--kozakura"><textarea type="text" name="msg" id="msg" class="input__field input__field--kozakura"></textarea><label for="mail" class="input__label input__label--kozakura">Message</label><svg class="graphic graphic--kozakura" preserveAspectRatio="none" viewBox="0 0 1200 60" height="100%" width="300%"><path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"></svg></div>
                 <input type="hidden" name="sendable" value="no">
+                <input type="button" name="submit" value="soumettre" class="toHide">
                 <div class="buttonBackWorks">
-                  <button class="button button--wayra button--border-thick button--text-upper button--size-l">Send</button>
+                  <span class="button button--wayra button--border-thick button--text-upper button--size-l" style='cursor:pointer;'>Send</span>
                 </div>
                 <p><input type="text" id="useless" placeholder='NE PAS REMPLIR CE CHAMP' style="position:absolute;left:-8000px;display:none;"></p>
               </form>
@@ -466,40 +468,49 @@
 
       <script type="text/javascript">
     		function start(){
+
     			var inputs = document.getElementsByTagName('input');
-    			inputs[4].addEventListener('click',isEmpty);
+          var buttonSend = document.querySelector(".buttonBackWorks").children[0];
+          buttonSend.preventDefault;
+    			buttonSend.addEventListener('click',isEmpty);
+          var name = [
+            "Nom",
+            "Objet",
+            "Mail",
+            "Message"
+          ]
     			function isEmpty(){
-            console.log('ok');
     				var errors = [];
     				for(var i = 0;i<3;i++){
     					if(inputs[i].value == ''){
-    						inputs[i].parentNode.style.borderBottom = 'red 4px solid';
-    						inputs[i].placeholder='Le champ '+inputs[i].name+' doit être rempli';
+                inputs[i].parentNode.children[1].style.color="red";
+                inputs[i].parentNode.children[1].innerHTML= name[i] + ' (Veuillez remplir ce champs !)'
     						errors[i]=i;
     					}
     					else{
-    						inputs[i].parentNode.style.color = 'black' ;
-    						inputs[i].parentNode.style.borderBottom = '4px solid black';
+                inputs[i].parentNode.children[1].style.color="black";
+                inputs[i].parentNode.children[1].innerHTML= name[i];
     					}
     				}
     				var textarea = document.getElementsByTagName('textarea');
     				if(textarea[0].value == ''){
-    					textarea[0].style.color = 'black' ;
-    					textarea[0].style.border = 'red 4px solid';
-    					textarea[0].placeholder='Le champ '+textarea[0].name+' doit être rempli';
+              textarea[0].parentNode.children[1].style.color="red";
+              textarea[0].parentNode.children[1].innerHTML= name[3] + ' (Veuillez remplir ce champs !)'
     					errors[3]=3;
     				}
     				else{
-    						textarea[0].style.color = 'black' ;
-    						textarea[0].style.border = '4px solid black';
+              textarea[0].parentNode.children[1].style.color="black";
+              textarea[0].parentNode.children[1].innerHTML= name[3];
     				}
     				if(errors.length==0 && inputs[5].value == ''){
+              inputs[3].value='yes';
     					inputs[4].type='submit';
     					inputs[4].checked=true;
-    					inputs[3].value='yes';
+              inputs[4].click();
+
     				}
     			}
-    		};
+    		} start();
     	</script>
 
 

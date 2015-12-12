@@ -1,6 +1,6 @@
 <?php header ("Refresh: 5;URL=index.php"); ?>
 <!doctype html>
-<html class="no-js" lang="fr">
+<html class="no-js" lang="fr" style="height:100%;">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -34,8 +34,8 @@
         }
         </style>
     </head>
-    <body>
-      <section id="example">
+    <body style="position:relative; height:100%;">
+      <section id="example" style="position:absolute; width:100%; top:40%;">
         <svg class="spinner" version="1.1" xmlns="http://www.w3.org/2000/svg" width="120" height="120">
           <defs>
             <clipPath id="clipPath">
